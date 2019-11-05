@@ -25,7 +25,6 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
@@ -57,7 +56,6 @@ Partial Class Form1
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.CheckBox2)
         Me.Panel1.Controls.Add(Me.CheckBox1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.NumericUpDown1)
@@ -70,21 +68,10 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(214, 68)
         Me.Panel1.TabIndex = 2
         '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(110, 29)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.CheckBox2.Size = New System.Drawing.Size(98, 17)
-        Me.CheckBox2.TabIndex = 6
-        Me.CheckBox2.Text = "(n1-n2)+(n1-n3)"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(140, 48)
+        Me.CheckBox1.Location = New System.Drawing.Point(140, 47)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.CheckBox1.Size = New System.Drawing.Size(68, 17)
@@ -95,7 +82,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(152, 8)
+        Me.Label3.Location = New System.Drawing.Point(143, 8)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(18, 13)
         Me.Label3.TabIndex = 3
@@ -103,11 +90,11 @@ Partial Class Form1
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(173, 5)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.NumericUpDown1.Location = New System.Drawing.Point(162, 5)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {64, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(35, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(46, 20)
         Me.NumericUpDown1.TabIndex = 5
         Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -166,5 +153,4 @@ Partial Class Form1
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Label3 As Label
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
 End Class
