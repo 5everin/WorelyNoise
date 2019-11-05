@@ -13,5 +13,5 @@ It needs N to be 3 or higher and produces cobblestone like patterns at low n val
 
 Formula is: take the positive of the following (n1-(max n/2))+ (n1-max n)
 
-eg. if max n=10 
-abs((n1-n5)+(n1-n10))
+eg. if n=10 
+Then Abs((n1-n5)+(n1-n10))
