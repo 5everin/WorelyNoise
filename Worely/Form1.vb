@@ -48,12 +48,13 @@ Public Class Form1
                                                  lvl = CInt(NumericUpDown1.Value)
                                                  If lvl > 64 Then lvl = 64
                                                  If lvl >= maxseeds Then lvl = maxseeds - 1
+                                                 Dim mynoise As Int32 = lvl
                                                  Dim dist As Single
                                                  For seednumber As Int32 = 0 To maxseeds - 1
                                                      dist = Vector2.Distance(vec, Seeds(seednumber))
                                                      For q As Int32 = 1 To lvl
                                                          If dist < low(q) Then
-                                                             For n = lvl - 1 To q Step -1
+                                                             For n As Int32 = lvl - 1 To q Step -1
                                                                  low(n + 1) = low(n)
                                                              Next
                                                              low(q) = dist
@@ -63,7 +64,11 @@ Public Class Form1
                                                  Next
                                                  'make some colour values 
                                                  Dim col As Int32
-                                                 col = CInt(low(lvl))
+                                                 If CheckBox2.Checked = True Then
+                                                     col = Abs(CInt((low(1) - (low(mynoise >> 1))) + (low(1) - low(mynoise - 1)))) 'my noise
+                                                 Else
+                                                     col = CInt(low(lvl)) 'Standard worley value
+                                                 End If
                                                  If col > 255 Then col = 255
                                                  If CheckBox1.Checked = True Then
                                                      displayArray(pixelnumber) = (255 << 24) + ((256 - col) << 16) + ((col) << 8) + (col + 140 - CInt(low(lvl) - low(lvl - 1)) >> 1) ' colour
@@ -135,7 +140,7 @@ Public Class Form1
         If PictureBox1.Top = 0 Then Noseedgen_GEN()
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged, CheckBox2.CheckedChanged
         Noseedgen_GEN()
     End Sub
 
