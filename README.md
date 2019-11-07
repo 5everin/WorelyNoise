@@ -1,5 +1,5 @@
 # WorleyNoise
-A Worley Noise Generator in vb.net
+A Worley Noise Generator in vb.net.
 Worley noise is a distance based noise algorithm useful amongst other things for generating cell or rock like textures.
 
 
@@ -9,7 +9,7 @@ Final update 5/11/19
 
 Now works with any N value but is capped at N=64.
 Also added an option to use an alternate noise formula made up by me (though Im sure its not original) 
-It needs N to be 3 or higher and produces cobblestone like patterns at low n values.
+It needs N to be <>2 and produces cobblestone or bubble like patterns at low n values.
 
 Formula is: take the positive of the following (n1-(max n/2))+ (n1-max n)
 
