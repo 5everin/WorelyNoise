@@ -9,7 +9,7 @@ Final update 5/11/19
 
 Now works with any N value but is capped at N=64.
 Also added an option to use an alternate noise formula made up by me (though Im sure its not original) 
-It needs N to be <>2 and produces cobblestone or bubble like patterns at low n values.
+It needs N to be <>2 and produces cobblestone or bubble(see below) like patterns at low n values.
 
 Formula is: take the positive of the following (n1-(max n/2))+ (n1-max n)
 
