@@ -19,4 +19,4 @@ Then Abs((n1-n5)+(n1-n10))
 
 ps.(not implemented in the code)
 (n5-n1)+(n10-n1)
-is faster and does the same :)
+is faster and does the same apart from when n=1. 
